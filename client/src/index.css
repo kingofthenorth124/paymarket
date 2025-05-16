@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 20% 98%;
+  --foreground: 215 28% 17%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 28% 17%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 17%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 215 28% 17%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 162 100% 36%;
+  --secondary-foreground: 210 20% 98%;
+  --accent: 255 70% 60%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --success: 180 90% 40%;
+  --success-foreground: 210 20% 98%;
+  --warning: 42 96% 71%;
+  --warning-foreground: 215 28% 17%;
+  --ring: 215 28% 17%;
+  --radius: 0.5rem;
+  --chart-1: 162 100% 36%;
+  --chart-2: 255 70% 60%;
+  --chart-3: 42 96% 71%;
+  --chart-4: 180 90% 40%;
+  --chart-5: 215 28% 17%;
+}
+
+.dark {
+  --background: 215 28% 5%;
+  --foreground: 210 20% 98%;
+  --muted: 217 19% 13%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 215 28% 5%;
+  --popover-foreground: 210 20% 98%;
+  --card: 215 28% 5%;
+  --card-foreground: 210 20% 98%;
+  --border: 217 19% 13%;
+  --input: 217 19% 13%;
+  --primary: 215 28% 17%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 162 100% 36%;
+  --secondary-foreground: 210 20% 98%;
+  --accent: 255 70% 60%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --success: 180 90% 40%;
+  --success-foreground: 210 20% 98%;
+  --warning: 42 96% 71%;
+  --warning-foreground: 215 28% 17%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sf antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-bold;
+  }
+
+  .font-mono {
+    @apply font-['Roboto_Mono',monospace];
+  }
+
+  .font-inter {
+    @apply font-['Inter',sans-serif];
+  }
+
+  .font-sf {
+    @apply font-['-apple-system','BlinkMacSystemFont','Segoe_UI','Roboto','Helvetica_Neue',sans-serif];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-md;
+  }
+}
